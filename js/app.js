@@ -1,5 +1,3 @@
-
-
 function alterarStatus(numberGame){
     //getElementById get the element by especific Id in HTML code and put in a variable.
     //querySelector select the element's attribut and put in other variable.
