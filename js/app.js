@@ -1,18 +1,18 @@
-function alterarStatus(numberGame){
+function alterarStatus(id){
     //getElementById get the element by especific Id in HTML code and put in a variable.
     //querySelector select the element's attribut and put in other variable.
-    let gameNow = document.getElementById(`game-${numberGame}`);
-    let botton = (gameNow.querySelector('a'));
-    let image = (gameNow.querySelector('div'));
+    let gameNow = document.getElementById(`game-${id}`);
+    let button = (gameNow.querySelector('.dashboard__item__button'));
+    let image = (gameNow.querySelector('.dashboard__item__img'));
     //classList list all the class includes in the element, use property like contains, remove e etc.
-    if (botton.textContent == 'Alugar') {
-        botton.textContent = 'Devolver';
-        botton.classList.add('dashboard__item__button--return');
-        image.classList.add('dashboard__item__img--rented');
+    if (image.classList.contains('dashboard__item__img--rented')) {
+        button.textContent = 'Alugar';
+        button.classList.remove('dashboard__item__button--return');
+        image.classList.remove('dashboard__item__img--rented'); 
     } else {
-        botton.textContent = 'Alugar';
-        botton.classList.remove('dashboard__item__button--return');
-        image.classList.remove('dashboard__item__img--rented');
+        button.textContent = 'Devolver';
+        button.classList.add('dashboard__item__button--return');
+        image.classList.add('dashboard__item__img--rented');
     }
 }
 
