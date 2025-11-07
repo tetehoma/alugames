@@ -2,6 +2,7 @@ function alterarStatus(id){
     //getElementById get the element by especific Id in HTML code and put in a variable.
     //querySelector select the element's attribut and put in other variable.
     let gameNow = document.getElementById(`game-${id}`);
+    // need write (.) before class's name in querySelector.
     let button = (gameNow.querySelector('.dashboard__item__button'));
     let image = (gameNow.querySelector('.dashboard__item__img'));
     //classList list all the class includes in the element, use property like contains, remove e etc.
